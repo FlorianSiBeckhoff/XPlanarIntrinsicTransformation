@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass">
+  <!-- Version: 4.0.6.0 -->
+  <Vendor>
+    <Name>Beckhoff Automation GmbH</Name>
+  </Vendor>
+  <DataTypes>
+	</DataTypes>
+  <Groups>
+    <Group SortOrder="895">
+      <Name>MotionControl</Name>
+      <DisplayName>Motion Control</DisplayName>
+      <ImageData16x14>424DD6020000000000003600000028000000100000000E00000001001800000000000000000000000000000000000000000000000000939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393BDBBBB5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C5D5C5C939393939393C5C3C35D5C5C9E9D9D5D5C5C636363C5C3C3C5C3C37D7C7B6C6B6CC0BEBD545454C0BEBDBDBBBB636363939393939393C5C3C35D5C5CADABABC8C6C5605F5EA8A6A4C5C3C3C5C3C3ADABAB9E9D9DC5C3C3939393605F5E70706F939393939393CCCCCC5D5C5C5454549A9A976C6B6CC5C3C3C5C3C3C5C3C3C5C3C3C5C3C3C5C3C3605F5EB2B2B2B0AEAE939393939393D0CECD5D5C5C8785859696965D5C5CAAA8A7545454747474C5C3C3C5C3C36C6B6CAAA8A7B2B2B2B2B2B2939393939393D5D3D3605F5ED5D3D35D5C5CCCCCCC5D5C5CB0AEAE7D7C7B9E9C9AC5C3C35D5C5CBDBBBBB2B2B2BDBBBB939393939393DDDDDD5D5C5CDDDDDD6C6B6CADABABCBCBCBCBCBCB9493915D5C5C545454939393C0BEBDBDBBBBB2B2B2939393939393DDDDDD5D5C5CE3E3E3ADABAB6C6B6CD0CECDCBCBCBCBCBCBC8C6C55D5C5CC5C3C3C0BEBDBDBBBBB2B2B2939393939393E3E3E3605F5EE3E3E3E3E3E3636363ADABABD0CECDCBCBCB8A8988878585C5C3C3C5C3C3BDBBBBBDBBBB939393939393E3E3E35D5C5CEAEAEAEAEAEAE3E3E3545454ADABAB9A9A975D5C5CCBCBCBC8C6C5C5C3C3BDBBBBB2B2B2939393939393E3E3E35D5C5CF1F1F1EAEAEAE3E3E3E3E3E36C6B6C797977D5D3D3CBCBCBC8C6C5C5C3C3BDBBBBB2B2B2939393939393E3E3E3605F5EEAEAEAEAEAEAE3E3E3DDDDDDDDDDDDD5D3D3D5D3D3CCCCCCC8C6C5C5C3C3BDBBBBBDBBBB939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393</ImageData16x14>
+    </Group>
+    <Group SortOrder="899" ParentGroup="MotionControl">
+      <Name>Internal</Name>
+      <DisplayName>Internal</DisplayName>
+    </Group>
+  </Groups>
+  <Modules>
+    <Module GUID="{6445FBA6-B920-4AD2-873B-8C61DD652099}" Group="Internal" TcSmClass="TComMcCtxObj" Hidden="true">
+      <Name>MC Instance</Name>
+      <CLSID ClassFactory="Tc3_Mc3Base_Core">{05030084-0000-0000-F000-000000000064}</CLSID>
+      <InitSequence>PSO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>0</Id>
+          <Name>MET</Name>
+          <DependOn>ManualConfig</DependOn>
+        </Context>
+        <Context>
+          <Id>1</Id>
+          <Name>MPT</Name>
+          <DependOn>ManualConfig</DependOn>
+        </Context>
+        <Context>
+          <Id>3</Id>
+          <Name>MJT</Name>
+          <DependOn>ManualConfig</DependOn>
+        </Context>
+      </Contexts>
+      <Parameters>
+        <Parameter>
+          <Name GlobalType="0">Execution-Task OID (MET)</Name>
+          <Comment>Object ID of task used for very time-critical command execution (Motion-Execution-Task)</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+          <PTCID>#x03002060</PTCID>
+        </Parameter>
+        <Parameter>
+          <Name GlobalType="0">Preparation-Task OID (MPT)</Name>
+          <Comment>Object ID of task used for less time-critical command preparation (Motion-Preparation-Task)</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+          <PTCID>#x03002061</PTCID>
+        </Parameter>
+        <Parameter>
+          <Name GlobalType="0">Job-Task OID (MJT)</Name>
+          <Comment>Object ID of JobTask for asynchronous processing (Motion-Job-Task)</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+          <Properties>
+            <Property>
+              <Name>TcJobTaskOID</Name>
+            </Property>
+          </Properties>
+          <PTCID>#x0300A11B</PTCID>
+        </Parameter>
+        <Parameter HideParameter="true">
+          <Name>Scheduling</Name>
+          <BaseType Namespace="MC" GUID="{2719D350-A47B-4785-A4FF-7C5A014A4ACB}">EMcTaskInternalSequence</BaseType>
+          <Default>
+            <EnumText>Stable</EnumText>
+          </Default>
+          <PTCID>#x0503009D</PTCID>
+        </Parameter>
+        <Parameter HideParameter="true">
+          <Name>DataAreaSizes</Name>
+          <BaseType GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO">TcIoDataAreaSize</BaseType>
+          <ArrayInfo>
+            <LBound>0</LBound>
+            <Elements Min="0" MaxUnbounded="true">1</Elements>
+          </ArrayInfo>
+          <PTCID>#x0300002A</PTCID>
+        </Parameter>
+      </Parameters>
+      <Properties>
+        <Property>
+          <Name>Category</Name>
+          <Value>TcNc3Instance</Value>
+        </Property>
+        <Property>
+          <Name>Category</Name>
+          <Value>HideTcComContextPP</Value>
+        </Property>
+        <Property>
+          <Name>ChildCategory</Name>
+          <Value>MC Object</Value>
+        </Property>
+      </Properties>
+    </Module>
+  </Modules>
+  <Configurations>
+	</Configurations>
+  <Library>
+    <Name>Tc3_Mc3Base_Core</Name>
+    <Version>4.0.6.0</Version>
+  </Library>
+</TcModuleClass>

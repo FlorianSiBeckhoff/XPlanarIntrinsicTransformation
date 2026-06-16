@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.24" ClassName="CTComPlcObjDef">
+	<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" XtvPath="PLC\PLC Instance.xtv" TmcPath="PLC\PLC.tmc">
+		<Name>__FILENAME__</Name>
+		<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+		<Contexts>
+			<Context>
+				<Id>0</Id>
+				<Name>PlcTask</Name>
+				<ManualConfig>
+					<OTCID>#x02010090</OTCID>
+				</ManualConfig>
+				<Priority>20</Priority>
+				<CycleTime>10000000</CycleTime>
+			</Context>
+		</Contexts>
+		<JsonDynPous><![CDATA[null]]></JsonDynPous>
+		<TaskPouOids>
+			<TaskPouOid Prio="20" OTCID="#x08502001"/>
+		</TaskPouOids>
+	</Instance>
+	<Mappings>
+		<OwnerA>
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^CAxis">
+				<Link VarA="PlcTask Inputs^MAIN.CAxis.NcToPlc" VarB="Outputs^ToPlc"/>
+				<Link VarA="PlcTask Outputs^MAIN.CAxis.PlcToNc" VarB="Inputs^FromPlc"/>
+			</OwnerB>
+			<OwnerB Name="TINC^XPlanar MC Project^Axes^Mover4330_1">
+				<Link VarA="PlcTask Inputs^MAIN.Mover._Mover.MCTOPLC^ACT" VarB="McToPlc^ACT" Size="896"/>
+				<Link VarA="PlcTask Inputs^MAIN.Mover._Mover.MCTOPLC^COORDMODE" VarB="McToPlc^COORDMODE" Size="80"/>
+				<Link VarA="PlcTask Inputs^MAIN.Mover._Mover.MCTOPLC^SET" VarB="McToPlc^SET" Size="1280"/>
+				<Link VarA="PlcTask Inputs^MAIN.Mover._Mover.MCTOPLC^SETONTRACK" VarB="McToPlc^SETONTRACK" Size="320"/>
+				<Link VarA="PlcTask Inputs^MAIN.Mover._Mover.MCTOPLC^STD" VarB="McToPlc^STD" Size="160"/>
+				<Link VarA="PlcTask Outputs^MAIN.Mover._Mover.PLCTOMC^STD" VarB="PlcToMc^STD" Size="8"/>
+			</OwnerB>
+			<OwnerB Name="TINC^XPlanar MC Project^Groups^Environment">
+				<Link VarA="PlcTask Inputs^XPlanar.Environment.MCTOPLC_STD" VarB="McToPlc^STD"/>
+			</OwnerB>
+			<OwnerB Name="TINC^XPlanar MC Project^Groups^XPlanar">
+				<Link VarA="PlcTask Inputs^XPlanar.Group.MCTOPLC_STD" VarB="McToPlc^STD"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.24">
+	<Project ProjectGUID="{08387C5D-BF4E-4032-B79F-7654F6C03322}" TargetNetId="192.168.137.77.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Settings MaxCpus="6" NonWinCpus="4">
+				<Cpu CpuId="2"/>
+				<Cpu CpuId="3" BaseTime="2500"/>
+				<Cpu CpuId="4" BaseTime="2500"/>
+				<Cpu CpuId="5" BaseTime="2500"/>
+			</Settings>
+			<Tasks>
+				<Task Id="2" Priority="1" CycleTime="2500" AmsPort="350" Affinity="#x00000008" AdtTasks="true">
+					<Name>XPlanar Task_3</Name>
+				</Task>
+				<Task Id="3" Priority="2" CycleTime="2500" AmsPort="351" Affinity="#x00000010" AdtTasks="true">
+					<Name>XPlanar Task_4</Name>
+				</Task>
+				<Task Id="4" Priority="3" CycleTime="2500" AmsPort="352" Affinity="#x00000020" AdtTasks="true">
+					<Name>XPlanar Task_5</Name>
+				</Task>
+				<Task Id="5" Priority="4" Affinity="#x00000004" AdtTasks="true" JobTask="true">
+					<Name>Job Task</Name>
+					<ImageId>327</ImageId>
+				</Task>
+				<Task Id="6" Priority="5" CycleTime="20000" AmsPort="353" Affinity="#x00000004" AdtTasks="true">
+					<Name>MC-Task (MET)</Name>
+				</Task>
+				<Task Id="7" Priority="6" CycleTime="100000" AmsPort="354" Affinity="#x00000004" AdtTasks="true">
+					<Name>MC-Task (MPT)</Name>
+				</Task>
+				<Task Id="9" Priority="20" CycleTime="100000" AmsPort="355" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+			<Modules>
+				<Module File="XPlanar.xti"/>
+			</Modules>
+		</System>
+		<Motion>
+			<NC File="NC.xti"/>
+			<MC File="XPlanar MC Project.xti"/>
+		</Motion>
+		<Plc>
+			<Project File="PLC.xti"/>
+		</Plc>
+		<Io/>
+	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{05000010-2001-0850-1000-040300205008}" Id="#x02030050" Watchdog="14000000040000000400000004000000"/>
+		<MappingInfo Identifier="{02010020-0060-0201-7000-010110001105}" Id="#x02030010" Watchdog="20000000040000000400000004000000"/>
+		<MappingInfo Identifier="{02010060-2001-0850-1000-100500205008}" Id="#x02030020" Watchdog="14000000040000000400000004000000"/>
+		<MappingInfo Identifier="{02010060-2001-0850-1000-120500205008}" Id="#x02030030" Watchdog="14000000040000000400000004000000"/>
+		<MappingInfo Identifier="{02010060-2001-0850-2000-120500205008}" Id="#x02030040" Watchdog="14000000040000000400000004000000"/>
+	</Mappings>
+</TcSmProject>

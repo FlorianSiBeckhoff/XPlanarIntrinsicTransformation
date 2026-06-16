@@ -1,0 +1,5622 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.24" ClassName="CTComObjDef">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{39D98E5C-8952-47C6-9BF8-1508EE017EA0}" Namespace="TcIoXPlanar">Position2D_DINT</Name>
+			<BitSize>64</BitSize>
+			<SubItem>
+				<Name>x</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000009}">DINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+				<Unit><![CDATA[mm]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000009}">DINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+				<Unit><![CDATA[mm]]></Unit>
+			</SubItem>
+			<Properties>
+				<Property>
+					<Name>plcAttribute_qualified_only</Name>
+				</Property>
+			</Properties>
+			<Relations>
+				<Relation>
+					<Type GUID="{ED4C91F3-A925-4365-80FE-E1A888A9FDD9}" Namespace="TcIoXPlanar">Position2D_DINT</Type>
+				</Relation>
+				<Relation>
+					<Type GUID="{9CB8D52D-842F-49C2-8EAE-C0400750816C}">Position2D_DINT</Type>
+				</Relation>
+			</Relations>
+		</DataType>
+		<DataType>
+			<Name GUID="{58D02B24-F692-4D02-9685-F3A9C1DB8022}" Namespace="TcIoXPlanar">TileType</Name>
+			<BitSize>64</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</BaseType>
+			<EnumInfo>
+				<Text><![CDATA[Undefined]]></Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[APS4222_1000_9000]]></Text>
+				<Enum>422210009000</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[APS4244_1000_0000]]></Text>
+				<Enum>424410000000</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[APS4242_1000_0000]]></Text>
+				<Enum>424210000000</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[APS4224_1000_0000]]></Text>
+				<Enum>422410000000</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[APS4322_0000_0000]]></Text>
+				<Enum>432200000000</Enum>
+			</EnumInfo>
+			<Properties>
+				<Property>
+					<Name>plcAttribute_qualified_only</Name>
+				</Property>
+			</Properties>
+			<Relations>
+				<Relation>
+					<Type GUID="{6CE9D832-C1FD-42C5-BC63-E25FEEFAC003}" Namespace="TcIoXPlanar">TileType</Type>
+				</Relation>
+				<Relation>
+					<Type GUID="{E3203211-4C48-47BD-8F94-FA859EABC2F8}" Namespace="XPlanar">TileType</Type>
+				</Relation>
+				<Relation>
+					<Type GUID="{8E45E68C-8C84-4884-8264-4053803FD962}" Namespace="XPlanar">TileType</Type>
+				</Relation>
+				<Relation>
+					<Type GUID="{DCE1958A-4F55-4AF2-A3FC-E4548F351405}" Namespace="XPlanar">TileType</Type>
+				</Relation>
+				<Relation>
+					<Type GUID="{24B6D58B-7903-4423-A74B-3762C13FF84F}" Namespace="TcIoXPlanar">TileType</Type>
+				</Relation>
+			</Relations>
+		</DataType>
+		<DataType>
+			<Name GUID="{A36D577C-EEF6-432B-9CEB-D5B321531A38}" Namespace="TcIoXPlanar">Position2D_UDINT</Name>
+			<BitSize>64</BitSize>
+			<SubItem>
+				<Name>x</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+				<Unit><![CDATA[mm]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+				<Unit><![CDATA[mm]]></Unit>
+			</SubItem>
+			<Properties>
+				<Property>
+					<Name>plcAttribute_qualified_only</Name>
+				</Property>
+			</Properties>
+			<Relations>
+				<Relation>
+					<Type GUID="{4DBE0E43-592A-42D1-828E-9049A52643F6}" Namespace="TcIoXPlanar">Position2D_UDINT</Type>
+				</Relation>
+			</Relations>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+		<DataType>
+			<Name GUID="{111E0546-3D45-498B-B146-FFBAB6E4D029}" Namespace="TcIoXPlanar">DrvLoadAps42xx</Name>
+			<BitSize>768</BitSize>
+			<SubItem>
+				<Name>DcLinkVoltageNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>0</BitOffs>
+				<Unit><![CDATA[V]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>64</BitOffs>
+				<Unit><![CDATA[V]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>128</BitOffs>
+				<Unit><![CDATA[V]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>192</BitOffs>
+				<Unit><![CDATA[V]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>256</BitOffs>
+				<Unit><![CDATA[°C]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>320</BitOffs>
+				<Unit><![CDATA[°C]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>384</BitOffs>
+				<Unit><![CDATA[°C]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>448</BitOffs>
+				<Unit><![CDATA[°C]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>512</BitOffs>
+				<Unit><![CDATA[%]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>576</BitOffs>
+				<Unit><![CDATA[%]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>640</BitOffs>
+				<Unit><![CDATA[%]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>704</BitOffs>
+				<Unit><![CDATA[%]]></Unit>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{786F16F0-8B55-31DF-0748-F8496D9D15CB}">PWR_Inputs_CB5D48CF</Name>
+			<BitSize>96</BitSize>
+			<SubItem>
+				<Name>DcLinkCurrent</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000009}">DINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+				<Unit><![CDATA[mA]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltage</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+				<Unit><![CDATA[mV]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>PSU_Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+				<Unit><![CDATA[0.1 °]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>PSU_I2T_Load</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+				<Unit><![CDATA[0.1 %]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>InputVoltage</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+				<Unit><![CDATA[V]]></Unit>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{CCDECAAD-8E1A-D808-705B-4A733D4A5A71}">DRV_Inputs_16C655FA</Name>
+			<BitSize>512</BitSize>
+			<SubItem>
+				<Name>AlphaX0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{204BF69F-5F14-5EBC-FCB3-824664F826E8}">DRV_Load_D053E213</Name>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name>DcLinkVoltageSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+				<Unit><![CDATA[mV]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+				<Unit><![CDATA[mV]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+				<Unit><![CDATA[mV]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>DcLinkVoltageNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+				<Unit><![CDATA[mV]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+				<Unit><![CDATA[0.1 °]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+				<Unit><![CDATA[0.1 °]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+				<Unit><![CDATA[0.1 °]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>TemperatureNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+				<Unit><![CDATA[0.1 °]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadSouth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+				<Unit><![CDATA[0.1 %]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadEast</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>144</BitOffs>
+				<Unit><![CDATA[0.1 %]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadWest</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>160</BitOffs>
+				<Unit><![CDATA[0.1 %]]></Unit>
+			</SubItem>
+			<SubItem>
+				<Name>I2TLoadNorth</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>176</BitOffs>
+				<Unit><![CDATA[0.1 %]]></Unit>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{616A2B70-8832-4FD9-2135-637C3E6FEC2F}">DRV_Outputs_7D3CF95D</Name>
+			<BitSize>528</BitSize>
+			<SubItem>
+				<Name>DrvControlWord</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaX7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AlphaY7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaX7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>BetaY7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{2F22F12A-16CA-881A-25E5-1A7C783A63E3}">COMM_Outputs_384138BD</Name>
+			<BitSize>32</BitSize>
+			<SubItem>
+				<Name>ControlWord</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Data1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{6560E7E7-BB67-A6FE-1D01-9174E05C797C}">FB_Inputs_CB76017D</Name>
+			<BitSize>1568</BitSize>
+			<SubItem>
+				<Name>SwitchPosition</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1056</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1072</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1088</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1552</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{5744CF58-6925-D557-3350-073F54FF0659}">FB_Inputs_E412091A</Name>
+			<BitSize>848</BitSize>
+			<SubItem>
+				<Name>SwitchPosition</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>88</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>680</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>712</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>728</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>744</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>760</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>792</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>840</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{BAFDAD22-6C43-A06B-CAC6-09E039DA3230}">FB_Inputs_CAADDD92</Name>
+			<BitSize>3120</BitSize>
+			<SubItem>
+				<Name>SwitchPosition</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S1Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1056</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1072</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1088</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1680</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1712</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1728</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1744</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1760</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1792</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1840</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1856</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1872</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1888</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1904</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1920</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1936</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1952</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1968</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1984</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2000</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2016</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2032</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2048</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2064</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2080</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2096</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3056</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3072</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3088</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3104</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{0823150E-9FF8-4FC1-B1C1-A524DC03F376}">FB_Inputs_5C44BF56</Name>
+			<BitSize>1680</BitSize>
+			<SubItem>
+				<Name>SwitchPosition</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S1Temperature</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>S1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>A7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>B7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>680</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>C7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>712</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>728</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>744</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>760</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>792</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>840</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>856</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>872</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>888</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>904</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>920</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>936</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>952</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>968</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>984</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1000</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1016</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1032</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1048</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1056</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1064</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1072</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1080</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1088</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>E7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1096</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>F7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>G7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H0Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H1Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H2Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H3Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H4Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H5Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H6Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_X</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Y</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>H7Field_Z</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000003}">SINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1672</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{E165FF93-CB57-49AA-B30B-28E416F7DE2A}" Namespace="TcIoXPlanar">XPlanarEvents</Name>
+			<DisplayName TxtId=""><![CDATA[XPlanarEvents]]></DisplayName>
+			<Comment TxtId=""><![CDATA[Manages all XPlanar event logger messages]]></Comment>
+			<EventId>
+				<Name Id="#x13170000">I0000_WritingDumpFile</Name>
+				<DisplayName TxtId=""><![CDATA[Writing dump file: {0}]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170001">I0001_MoverRedetectionStarted</Name>
+				<DisplayName TxtId=""><![CDATA[Mover redetection started]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170007">I0007_CoordinatedMoverComm_Started_IdentifyAndFindAllConfigured</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication started to identify and rearrange all movers.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170008">I0008_CoordinatedMoverComm_Successful</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication finished.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170009">I0009_CoordinatedMoverComm_MoverAssigned</Name>
+				<DisplayName TxtId=""><![CDATA[BTN '{0}' was found at position {1}/{2} and assigned to mover object 0x{3,X}.]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000A">I000A_CoordinatedMoverComm_MoverRemoved</Name>
+				<DisplayName TxtId=""><![CDATA[Mover with object ID 0x{0,X} was removed from the system.]]></DisplayName>
+				<Severity>Verbose</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000B">I000B_CoordinatedMoverComm_Started_IdentifyAndAssignPossible</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication started to identify and assign movers if possible.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000C">I000C_CoordinatedMoverComm_Started_ReadBTNs</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication started to read BTN of all movers.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000D">I000D_CoordinatedMoverComm_Started_DetermineOrientations</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication started to determine orientations of all movers.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000E">I000E_CoordinatedMoverComm_Started_DetermineOrientationsWithoutTurning</Name>
+				<DisplayName TxtId=""><![CDATA[Coordinated mover communication started to determine orientations of all movers without assigning.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x1317000F">I000F_CoordinatedMoverComm_PreparingMovers</Name>
+				<DisplayName TxtId=""><![CDATA[Preparing movers for communication.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170010">I0010_CoordinatedMoverComm_InProgress</Name>
+				<DisplayName TxtId=""><![CDATA[Communication in progress...]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13170011">I0011_CoordinatedMoverComm_RearrangingMovers</Name>
+				<DisplayName TxtId=""><![CDATA[Rearrange movers.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175000">I5000_DeterminedNcCycleTime</Name>
+				<DisplayName TxtId=""><![CDATA[Determined NC cycle time: {0} s]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175001">I5001_Communication_Started</Name>
+				<DisplayName TxtId=""><![CDATA[Mover communication started.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175002">I5002_Communication_FinishedSuccessfully</Name>
+				<DisplayName TxtId=""><![CDATA[Mover communication finished successfully.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175003">I5003_Communication_OrientationDeterminationStarted</Name>
+				<DisplayName TxtId=""><![CDATA[Mover orientation determination started.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175004">I5004_Communication_OrientationDeterminationSuccessful</Name>
+				<DisplayName TxtId=""><![CDATA[Mover orientation determination finished successfully.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175005">I5005_Communication_FileTransferStarted</Name>
+				<DisplayName TxtId=""><![CDATA[Mover file transfer started.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x13175006">I5006_Communication_FileTransferSuccessful</Name>
+				<DisplayName TxtId=""><![CDATA[Mover file transfer finished successfully.]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175000">W5000_ParametrizationSetNotFound</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Defined parametrization set could not be found. Hence, parameters haven't been changed.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175001">W5001_ImplausibleMoverPosition</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Implausible mover position. Mover was removed from current movement area.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175002">W5002_InvalidMoverBasicInertia</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid basic inertia. Basic inertia is set to standard inertia (plain mover).]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175003">W5003_InvalidPayloadInertia</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid payload inertia. Payload inertia is set to zero.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175004">W5004_PowerLimitReached</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] At least one of the used tiles reached power limit.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175006">W5006_CurrentLimitReached</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] At least one of the used tiles reached current limit.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175009">W5009_InvalidFeedback</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid mover feedback. Mover was removed from current movement area.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317500C">W500C_InvalidControllerParameters</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid controller parameters of axis {1}. Controller parameters are set to default.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317500D">W500D_InvalidFeedforwardParameters</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid feedforward parameters of axis {1}. Feedforward parameters are set to default.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317500E">W500E_InvalidObserverParameters</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid observer parameters of axis {1}. Observer parameters are set to default.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175012">W5012_ExternalFeedbackInterfaceMissing</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Failed to retrieve external feedback interface. Check the external feedback OID parameter is correct.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175013">W5013_InvalidExternalFeedbackObserverParameters</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid external feedback observer parameters of axis {1}. Observer parameters are set to default.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175014">W5014_InvalidIdentifiedMass</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] There is either no payload on the mover to be detected or the payload is too light (less than 0.1 kg).]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175015">W5015_ForceOrPowerLimitReached</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] During payload identification process the force or power limits by the tile were exceeded and the result would be meaningless.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175016">W5016_PositionOffsetOutOfAllowedRange</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Position offset out of allowed range ({1} axis)]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175018">W5018_ExternalFeedbackParametrizationSetNotFound</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Defined external feedback parametrization set could not be found.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23175019">W5019_InvalidKalmanFilterParameters</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid Kalman filter parameters of axis {1}. Kalman filter parameters are set to default.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23176002">W6002_TileHardwareWarning</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Tile hardware warning (Value of CoE register 0x81430: 0x{1,X}).]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23176003">W6003_FbInputsNotChangedWarning</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] FB Inputs have not changed since last cycle.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23176004">W6004_TileSwitchPositionMissedCycleWarning</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] FB Inputs were missed for one cycle.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x23176005">W6005_TileSwitchPositionImplausibleWarning</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] FB Inputs implausible switch position (expected: {1}, actual: {2}).]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317A001">WA001_InvalidEnablingTime</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Enabling time invalid. Must be between 0.1 s and 4.0 s.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317A002">WA002_InvalidDisablingTime</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Disabling time invalid. Must be between 0.1 s and 4.0 s.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317A003">WA003_InvalidEnablingHeight</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Enabling height invalid. Must be between 0.5 mm and 5.0 mm.]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x2317B002">WB002_ConnectionHasBeenInterrupted</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Connection has been interrupted]]></DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33170029">E0029_CouldNotProcessAllCommands</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not process all responses ({1} of {2})]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317002B">E002B_CoordinatedMoverComm_MoverNotAbleToIdentify</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover 0x{1,X} is not able to identify or has no valid BTN configured.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317002C">E002C_CoordinatedMoverComm_MoverError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] {1} mover(s) have an error, e.g. mover 0x{2,X}. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317002D">E002D_CoordinatedMoverComm_ConfiguredBtnNotIdentified</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The configured BTN '{1}' was not identified on the system.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317002E">E002E_CoordinatedMoverComm_Failed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Coordinated mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33170035">E0035_CoordinatedMoverComm_WrongMoverType</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Wrong mover type. Mover 0x{1,X} is a mover type that cannot communicate.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317003C">E003C_CoordinatedMoverComm_BtnIdentifiedMultipleTimes</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] BTN '{1}' was identified multiple times.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317003D">E003D_CoordinatedMoverComm_InvalidTileFirmware</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] {1} tile(s) have an invalid firmware version, e.g. tile 0x{2,X}. Firmware must be at least version 4. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317003E">E003E_CoordinatedMoverComm_TileDcLinkVoltageNotOk</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] DC link voltage of {1} tile(s) is not ok, e.g. tile 0x{2,X}. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317003F">E003F_CoordinatedMoverComm_PartHasAnError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Part 0x{1,X} has an error. {2} tiles of this part have an error. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33170040">E0040_CoordinatedMoverComm_MoverIsActivated</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] {1} mover(s) are activated, e.g. mover 0x{2,X}. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33170044">E0044_CoordinatedMoverComm_IdentifiedBtnNotConfigured</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Identified BTN '{1}' is not configured.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317004B">E004B_CoordinatedMoverComm_NoMovers</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] No movers were found on the system. Coordinated mover communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317004C">E004C_CoordinatedMoverComm_OrientationWrongMoverType</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Wrong mover type. Mover 0x{1,X} is a mover type which orientation cannot be determined yet.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317004D">E004D_CoordinatedMoverComm_FailedPreparation</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Preparation for mover communication of mover 0x{1,X} failed. Coordinated mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317004E">E004E_CoordinatedMoverComm_FailedCommunication</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover communication of mover 0x{1,X} failed. Coordinated mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317004F">E004F_CoordinatedMoverComm_UncertainOrientation</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The determined orientation of mover 0x{1,X} is uncertain. Coordinated mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33172000">E2000_SameTargetButDifferentTasks</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Peers with the same target musst be assigned to the same task]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175001">E5001_CouldNotReachStartHeight</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not reach defined start height]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175002">E5002_BtnNotFound</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] BTN ({1}) not found]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175003">E5003_FeedbackVersionNotAvailable</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Selected feedback version is not available.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175007">E5007_InitOfMoverFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Initialization failed]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175008">E5008_MoverPositionOutsideOfMovementArea</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Actual position is outside of movement area. Initiating mover stop]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175009">E5009_NcMappingError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] NC mapping error]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317500A">E500A_FeedbackError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Feedback error]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317500B">E500B_NcCycleTimeCouldNotBeDetermined</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not determine NC cycle time. Initiating mover stop]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317500C">E500C_UnreachablePositionSetpoints</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Position setpoints are unreachable (axis = {1}; position setpoint = {2,f}; actual position = {3,f}). Initiating mover stop]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317500F">E500F_CouldNotEnterMovementArea</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not enter movement area]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175010">E5010_ObserverError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Observer error. Invalid observer parameters seem to be configured.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175011">E5011_RotatedMoverError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is rotated. Enabling is not possible.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175012">E5012_MaxForceLimitsExceedLimit</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Maximum force limit parameters exceed the maximum limit. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175013">E5013_MinForceLimitsExceedLimit</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Minimum force limit parameters exceed the maximum limit. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175014">E5014_MinGreaterMaxForceLimits</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Minimum force limit parameters are greater than the maximum force parameters. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175015">E5015_MaxForceLimitsBelowZero</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Maximum force limit parameters are below zero. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175016">E5016_MinForceLimitsBelowZero</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Minimum force limit parameters are below zero. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175017">E5017_MaxForceLimitsZeroIn1Dof</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Maximum force limit parameters are equal to zero in at least 1 DOF. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175018">E5018_MinForceLimitsZeroIn1Dof</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Minimum force limit parameters are equal to zero in at least 1 DOF. Parameters stay the same.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317501A">E501A_NoRotationAtThisPosition</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] C setpoint is unreachable at this position. Initiating mover stop.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317501D">E501D_NoMovementAreaAssigned</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is not assigned to any movement area. Enabling is not possible.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317501F">E501F_NotAllowedToLeaveMovementAreaWhenFlying</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is not allowed to leave movement area when it is activated. Disable mover first!]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175022">E5022_NcPartNotFound</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Commanded Part OID from NC (0x{1,X}) not found.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175023">E5023_IsOnPartWithError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is on part with error. Switching into error state.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175024">E5024_UsesDeactivatedPart</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover uses deactivated part. Switching into error state.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175026">E5026_SystemCouldNotBeEnabled</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover cannot enable because the part and the tiles could not be enabled. Switching into error state.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175027">E5027_Communication_MoverHasError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover has an error. Communication attempt is aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175028">E5028_Communication_InvalidTileFw</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Invalid tile firmware. Firmware version must at least be 4. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175029">E5029_Communication_TileDCLinkVoltageTooLow</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Tile DC link voltage too low. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317502A">E502A_Communication_CouldNotSwitchSystemOn</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] System could not be switched on. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317502B">E502B_Communication_CommunicationFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317502C">E502C_Communication_FileTransferFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover file transfer failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317502E">E502E_MoverCannotBeReset</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover cannot be reset because part does not reset.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175030">E5030_Communication_OrientationDeterminationNotAllowed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover orientation determination is not allowed for the configured mover type.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175031">E5031_Communication_PartHasAnError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] One or more Parts used by the mover have an error. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175032">E5032_Communication_MoverNotAbleToCommunicate</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] No ID bumper is configured. Mover communication not possible.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175033">E5033_Communication_MoverIsActivated</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is activated. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175034">E5034_Communication_OrientationUncertain</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Determined mover orientation is uncertain.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175035">E5035_MoverCannotBeReenabled</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover cannot be reenabled right now because the current NC setpoints are out of range.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175036">E5036_CouldNotCancelMoverTransfer</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not cancel mover transfer]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175038">E5038_CouldNotFinishMoverAdoption</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not finish mover adoption]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175039">E5039_RemovedFromMaDueToLostEtherCat</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Removed Mover from movement area due to lost EtherCAT connection of one or more used Tiles]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317503A">E503A_ExternalFeedbackDeviationTooLarge</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] External feedback deviation too large on axis {1}.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317503C">E503C_ActivateMoverTransferFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Activate mover transfer failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175041">E5041_Communication_MoverTransferNotActivated</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is between to XPlanar systems and mover transfer is not activated. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175042">E5042_Communication_OrientationBumperOutsideTile</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover bumper exceeds the tile area. Mover orientation cannot be determined.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175043">E5043_Communication_OrientationWrongMoverFirmware</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Wrong mover firmware. Firmware version must be greater than 3. Mover orientation cannot be determined.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175044">E5044_Communication_TransmissionFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Transmission of the message to the mover failed. Mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175045">E5045_Communication_ReceptionFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The signal level of the mover answer is too low. Mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175046">E5046_Communication_DecodingFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The message received from the mover is invalid. Mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175047">E5047_Communication_OrientingMoverFailed</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover is rotated and cannot be orientated. Communication aborted.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175048">E5048_Communication_MoverPositionChanged</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mover position changed during communication. Mover orientation cannot be determined.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33175049">E5049_Communication_CouldNotEstablishCommunication</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] No communication could be established with the mover. Mover communication failed.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33176002">E6002_EtherCatCommunicationLost</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] EtherCAT communication is lost. System is shut down.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33176004">E6004_PowerSupplyTemperatureTooHigh</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Power supply temperature ({1,f} °C) exceeds the limit of {2,f} °C. System is shut down.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33176005">E6005_TileTemperatureTooHigh</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Tile temperature {1} ({2,f} °C) exceeds the limit of {3,f} °C. System is shut down.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33176007">E6007_HardwareError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Hardware error]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317600B">E600B_CouldNotResetTile</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Could not reset Tile]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33178006">E8006_TileHardwareError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] One tile of this part has an error. The part, its tiles and its movers are shutting down.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33178009">E8009_PartDetectionNotPossible</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Part redetection is not possible.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179008">E9008_SubMoversInDifferentMovementArea</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Submovers are in different movement areas.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x3317900E">E900E_SubMoverPositionsMismatch</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Mismatch of Submovers positions.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179100">E9100_SoftwareCouplingInitializationCheckFail</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Software coupling cannot be initialized. Check parameters and movers' positions.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179101">E9101_SoftwareCouplingSubmoverError</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] Submover has an error in software coupling.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179102">E9102_SoftwareCouplingNoAvailableMemory</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] No memory can be assigned the software coupling.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179103">E9103_NumberOfSubmoversNotSupported</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The number of submovers is not supported for the coupling.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179104">E9104_SoftwareCouplingSubmoverControlOff</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The submover's control is off.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179105">E9105_SoftwareCouplingInvalidSetpoints</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The setpoints for the software coupling are invalid.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179106">E9106_SoftwareCouplingSubmoverTouchPowerLimit</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] One of submovers touch the power limit, and the coupling is disabled.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="#x33179108">E9108_SoftwareCouplingActiveIndexNotValid</Name>
+				<DisplayName TxtId=""><![CDATA[[Event ID: 0x{0,X}] The active index is not available.]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000c30e0000c30e000000000000000000003d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b297b766f7a756d79746c77736a767168756f669f9b959f9b956e695f6c675c6a655a686357666054635e523d3b293d3b297f7a737e7a727e79717c786f7a766d78746a3d3b293d3b299f9b956f6a606d675d6b655a6863576560543d3b293d3b2988847d8a857e8a857e88847c8581793d3b299f9b959f9b953d3b29b6b4ae706b606d685d6b665b6862573d3b293d3b2995918b96938c96928c95918a3d3b299f9b959f9b95b6b4ae9f9b953d3b29b6b4ae706a606d685d6a655a3d3b293d3b29a19e98a39f9aa3a09a3d3b299f9b959f9b953d3b293d3b29b6b4ae9f9b953d3b29b6b4ae6f6a606c675d3d3b293d3b29aca9a4aeaba63d3b299f9b959f9b953d3b293d3b293d3b293d3b29b6b4ae9f9b953d3b29b6b4ae6f695f3d3b293d3b29b6b4b0c0bebb3d3b299f9b953d3b29b6b4ae3d3b293d3b29b6b4ae3d3b29b6b4ae3d3b29b6b4ae716d633d3b293d3b29c0bebbc0bebb3d3b293d3b293d3b293d3b29b6b4aeb6b4ae3d3b293d3b293d3b293d3b29b6b4ae736e643d3b293d3b29c9c7c4cdcbc93d3b293d3b293d3b293d3b29b6b4aeb6b4ae3d3b293d3b293d3b293d3b29b6b4ae746f663d3b293d3b29d0ceccdcdbd9d8d7d53d3b293d3b29b6b4ae3d3b293d3b29b6b4ae3d3b293d3b2987837b7e79717671683d3b293d3b29d5d3d2dcdbd9dcdbd9dedddbb6b4ae3d3b293d3b293d3b293d3b29b6b4ae97938d97938d7e797178736a3d3b293d3b29d7d6d5dfdedde5e4e3dcdbd9dad9d8d0cfcc3d3b293d3b29b0aeaaa5a29ca5a29c8c88817f7a7379746c3d3b293d3b29d6d5d3dddcdae1e0dfdfdedddcdbd9d0cfccd0cfccb0aeaab0aeaa9995909995908d8882807b747a756d3d3b293d3b29d2d0cfd8d6d5dad8d7d8d7d5d4d2d0cdcbc9c4c2bfb9b7b3aeaca8a4a09b98948f8c8781807b747a766e3d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b29</ImageData>
+	</ImageDatas>
+	<Module Id="#x01010100" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|TcIoXPlanar|5.0.112.0">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<TmcDesc GUID="{A60ED441-FFF9-45C1-870C-716CE9B48A74}" ClassFactoryId="Beckhoff Automation GmbH|TcIoXPlanar|5.0.112.0">
+			<Name>APS4244_1000_0000</Name>
+			<CLSID ClassFactory="TcIoXPlanar">{176EA524-764F-4B1D-9472-928C38EC7000}</CLSID>
+			<Info>
+				<ImageData>424d360300000000000036000000280000001000000010000000010018000000000000000000c30e0000c30e000000000000000000003d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b297b766f7a756d79746c77736a767168756f669f9b959f9b956e695f6c675c6a655a686357666054635e523d3b293d3b297f7a737e7a727e79717c786f7a766d78746a3d3b293d3b299f9b956f6a606d675d6b655a6863576560543d3b293d3b2988847d8a857e8a857e88847c8581793d3b299f9b959f9b953d3b29b6b4ae706b606d685d6b665b6862573d3b293d3b2995918b96938c96928c95918a3d3b299f9b959f9b95b6b4ae9f9b953d3b29b6b4ae706a606d685d6a655a3d3b293d3b29a19e98a39f9aa3a09a3d3b299f9b959f9b953d3b293d3b29b6b4ae9f9b953d3b29b6b4ae6f6a606c675d3d3b293d3b29aca9a4aeaba63d3b299f9b959f9b953d3b293d3b293d3b293d3b29b6b4ae9f9b953d3b29b6b4ae6f695f3d3b293d3b29b6b4b0c0bebb3d3b299f9b953d3b29b6b4ae3d3b293d3b29b6b4ae3d3b29b6b4ae3d3b29b6b4ae716d633d3b293d3b29c0bebbc0bebb3d3b293d3b293d3b293d3b29b6b4aeb6b4ae3d3b293d3b293d3b293d3b29b6b4ae736e643d3b293d3b29c9c7c4cdcbc93d3b293d3b293d3b293d3b29b6b4aeb6b4ae3d3b293d3b293d3b293d3b29b6b4ae746f663d3b293d3b29d0ceccdcdbd9d8d7d53d3b293d3b29b6b4ae3d3b293d3b29b6b4ae3d3b293d3b2987837b7e79717671683d3b293d3b29d5d3d2dcdbd9dcdbd9dedddbb6b4ae3d3b293d3b293d3b293d3b29b6b4ae97938d97938d7e797178736a3d3b293d3b29d7d6d5dfdedde5e4e3dcdbd9dad9d8d0cfcc3d3b293d3b29b0aeaaa5a29ca5a29c8c88817f7a7379746c3d3b293d3b29d6d5d3dddcdae1e0dfdfdedddcdbd9d0cfccd0cfccb0aeaab0aeaa9995909995908d8882807b747a756d3d3b293d3b29d2d0cfd8d6d5dad8d7d8d7d5d4d2d0cdcbc9c4c2bfb9b7b3aeaca8a4a09b98948f8c8781807b747a766e3d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b293d3b29</ImageData>
+			</Info>
+			<InitSequence>PSO</InitSequence>
+			<Contexts>
+				<Context>
+					<Id>1</Id>
+					<ManualConfig>
+						<OTCID>#x02010030</OTCID>
+					</ManualConfig>
+					<Priority>2</Priority>
+					<CycleTime>250000</CycleTime>
+				</Context>
+			</Contexts>
+			<Parameters>
+				<Group><![CDATA[Base]]></Group>
+				<Group><![CDATA[General]]></Group>
+				<Group><![CDATA[PowerSupply]]></Group>
+				<Group><![CDATA[Drive]]></Group>
+				<Group><![CDATA[Calibration]]></Group>
+				<Group><![CDATA[Simulation]]></Group>
+				<Group><![CDATA[Testing]]></Group>
+				<Group><![CDATA[SubTiles]]></Group>
+				<Group><![CDATA[StatorFieldCompensation]]></Group>
+				<Group Collapsed="true"><![CDATA[CoE - General]]></Group>
+				<Group Collapsed="true"><![CDATA[CoE - PWR Diag Data]]></Group>
+				<Parameter DisableCodeGeneration="true" Group="General">
+					<Name>BTN</Name>
+					<Comment><![CDATA[8 digit alphanumerical number. Has to be unique for each tile. Has to match with a reference in the corresponding TileCalibration bml file.]]></Comment>
+					<BitSize>72</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000100000008}">STRING(8)</BaseType>
+					<PTCID>#x03176007</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter DisableCodeGeneration="true" Group="General">
+					<Name>TilePositionOnPart</Name>
+					<Comment><![CDATA[Position of the tile origin in its part.]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{39D98E5C-8952-47C6-9BF8-1508EE017EA0}" Namespace="TcIoXPlanar">Position2D_DINT</BaseType>
+					<PTCID>#x03176018</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>IsDcLinkAvailable</Name>
+					<Comment><![CDATA[TRUE: ActPowerSupplyCurrent and Temperature have valid values]]></Comment>
+					<BitSize>8</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+					<PTCID>#x03176041</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>ObservedTilePsuPower</Name>
+					<Comment><![CDATA[Actual power consumed by the tile.]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[W]]></Unit>
+					<PTCID>#x03176020</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>PsuPowerLimitPercentageFactor</Name>
+					<Comment><![CDATA[0% means no power consumption, 100% means the PSU is fully loaded.]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[%]]></Unit>
+					<PTCID>#x03176022</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>Temperature</Name>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[°C]]></Unit>
+					<PTCID>#x0317603d</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>I2T_Load</Name>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[%]]></Unit>
+					<PTCID>#x0317603e</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="PowerSupply">
+					<Name>InputVoltage</Name>
+					<BitSize>16</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+					<Unit><![CDATA[VDC]]></Unit>
+					<PTCID>#x0317603f</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Calibration">
+					<Name>BmlCalibrationId</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x0317602e</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Calibration">
+					<Name>BmlIdentificationTimestamp</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x0317602f</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Calibration">
+					<Name>TileCalibrationReferenceOriginInBmlFile</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x0317600b</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Calibration">
+					<Name>TileCalibrationReferenceOriginInUse</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x0317600c</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="StatorFieldCompensation">
+					<Name>BmlSfcId</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x03176042</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="StatorFieldCompensation">
+					<Name>BmlSfcVersion</Name>
+					<BitSize>2048</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+					<PTCID>#x03176043</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - PWR Diag Data">
+					<Name>DcSupplyVoltage</Name>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[V]]></Unit>
+					<PTCID>#x031760ff</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" DisableCodeGeneration="true" Group="Base">
+					<Name>TaskOID</Name>
+					<Comment><![CDATA[The task has to be set in the Context tab.]]></Comment>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+					<PTCID>#x03002060</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>IsEtherCatOk</Name>
+					<Comment><![CDATA[TRUE: EtherCAT is working]]></Comment>
+					<BitSize>8</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+					<PTCID>#x0317600a</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>TileType</Name>
+					<Comment><![CDATA[Tile type]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{58D02B24-F692-4D02-9685-F3A9C1DB8022}" Namespace="TcIoXPlanar">TileType</BaseType>
+					<PTCID>#x03176030</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>Dimension</Name>
+					<Comment><![CDATA[Dimension of quadrant]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{A36D577C-EEF6-432B-9CEB-D5B321531A38}" Namespace="TcIoXPlanar">Position2D_UDINT</BaseType>
+					<PTCID>#x0317600d</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" HideParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>Position</Name>
+					<Comment><![CDATA[Position of quadrant on tile]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{39D98E5C-8952-47C6-9BF8-1508EE017EA0}" Namespace="TcIoXPlanar">Position2D_DINT</BaseType>
+					<PTCID>#x03176038</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>EtherCatDeviceOid</Name>
+					<Comment><![CDATA[OID of the linked hardware I/O XPlanar tile (drive part).]]></Comment>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+					<PTCID>#x03176009</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>AmsNetID</Name>
+					<Comment><![CDATA[AMS Net ID of the EtherCAT master.]]></Comment>
+					<BitSize>48</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
+					<PTCID>#x03176010</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Base">
+					<Name>EtherCATSlaveAddress</Name>
+					<Comment><![CDATA[EtherCAT slave address of the linked hardware I/O XPlanar tile (drive part).]]></Comment>
+					<BitSize>16</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+					<PTCID>#x03176011</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Drive">
+					<Name>DriveStatusWord</Name>
+					<Comment><![CDATA[Status word of linked hardware I/O XPlanar tile (drive part).]]></Comment>
+					<BitSize>16</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+					<PTCID>#x03176019</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Drive">
+					<Name>ObservedDrivePower</Name>
+					<Comment><![CDATA[Actual power consumed by the drive.]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[W]]></Unit>
+					<PTCID>#x0317603b</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Drive">
+					<Name>DrivePowerLimitPercentageFactor</Name>
+					<Comment><![CDATA[0% means no power consumption, 100% means the drive is fully loaded.]]></Comment>
+					<BitSize>64</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+					<Unit><![CDATA[%]]></Unit>
+					<PTCID>#x0317603c</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>DeviceType</Name>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000007}">DWORD</BaseType>
+					<PTCID>#x03176100</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>DeviceName</Name>
+					<BitSize>144</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000100000011}">STRING(17)</BaseType>
+					<PTCID>#x03176101</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>HardwareVersion</Name>
+					<BitSize>24</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000100000002}">STRING(2)</BaseType>
+					<PTCID>#x03176102</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>SoftwareVersion</Name>
+					<BitSize>24</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000100000002}">STRING(2)</BaseType>
+					<PTCID>#x03176103</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>BootloaderVersion</Name>
+					<BitSize>256</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00010000001F}">STRING(31)</BaseType>
+					<PTCID>#x03176104</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="CoE - General">
+					<Name>BTN</Name>
+					<Comment><![CDATA[8 digit alphanumerical number. Has to be unique for each tile. Has to match with a reference in the corresponding TileCalibration bml file.]]></Comment>
+					<BitSize>72</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000100000008}">STRING(8)</BaseType>
+					<PTCID>#x03176119</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="Drive">
+					<Name>DrvLoad</Name>
+					<BitSize>768</BitSize>
+					<BaseType GUID="{111E0546-3D45-498B-B146-FFBAB6E4D029}" Namespace="TcIoXPlanar">DrvLoadAps42xx</BaseType>
+					<PTCID>#x0317603a</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="SubTiles">
+					<Name>SubTileCount</Name>
+					<Comment><![CDATA[Returns the number of tiles.]]></Comment>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+					<PTCID>#x0317602b</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="SubTiles">
+					<Name>SubTileObjectIDs</Name>
+					<Comment><![CDATA[Returns an array containing the object IDs of all tiles.]]></Comment>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" Max="3">1</Elements>
+					</ArrayInfo>
+					<PTCID>#x0317602c</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+			</Parameters>
+			<DataAreas>
+				<DataArea>
+					<AreaNo AreaType="Internal" CreateSymbols="true">1</AreaNo>
+					<Name>ScopeData</Name>
+					<ContextId>1</ContextId>
+					<ByteSize>560</ByteSize>
+					<Symbol>
+						<Name>ControlWord</Name>
+						<BitSize>16</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+						<BitOffs>0</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>StatusWord</Name>
+						<BitSize>16</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+						<BitOffs>16</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>TileGroupControlWord</Name>
+						<BitSize>16</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+						<BitOffs>32</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>TileGroupStatusWord</Name>
+						<BitSize>16</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+						<BitOffs>48</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_ObservedPower</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>64</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_PowerLimitPercentageFactor</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>128</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_DcLinkVoltageNorth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>192</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_DcLinkVoltageEast</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>256</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_DcLinkVoltageSouth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>320</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_DcLinkVoltageWest</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>384</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_I2TLoadNorth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>448</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_I2TLoadEast</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>512</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_I2TLoadSouth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>576</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_I2TLoadWest</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>640</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_TemperatureNorth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>704</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_TemperatureEast</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>768</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_TemperatureSouth</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>832</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Drive_TemperatureWest</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>896</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>UncompressedSensorValues</Name>
+						<BitSize>3072</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+						<ArrayInfo>
+							<LBound>0</LBound>
+							<Elements>192</Elements>
+						</ArrayInfo>
+						<BitOffs>960</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_DcLinkVoltage</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4032</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_DcLinkCurrent</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4096</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_ObservedPower</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4160</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_PowerLimitPercentageFactor</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4224</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_Temperature</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4288</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_I2TLoad</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4352</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>PSU_InputVoltage</Name>
+						<BitSize>64</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
+						<BitOffs>4416</BitOffs>
+					</Symbol>
+				</DataArea>
+			</DataAreas>
+			<DataPointers>
+				<DataPointer>
+					<PTCID>#x0317601d</PTCID>
+					<Name>PWR_Inputs</Name>
+					<Type GUID="{786F16F0-8B55-31DF-0748-F8496D9D15CB}">PWR_Inputs_CB5D48CF</Type>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x0317602d</PTCID>
+					<Name>DRV_Status</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x0317601e</PTCID>
+					<Name>DRV_Inputs</Name>
+					<Type GUID="{CCDECAAD-8E1A-D808-705B-4A733D4A5A71}">DRV_Inputs_16C655FA</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176033</PTCID>
+					<Name>DRV_Load</Name>
+					<Type GUID="{204BF69F-5F14-5EBC-FCB3-824664F826E8}">DRV_Load_D053E213</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176029</PTCID>
+					<Name>DRV_Outputs</Name>
+					<Type GUID="{616A2B70-8832-4FD9-2135-637C3E6FEC2F}">DRV_Outputs_7D3CF95D</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x0317602a</PTCID>
+					<Name>COMM_Outputs</Name>
+					<Type GUID="{2F22F12A-16CA-881A-25E5-1A7C783A63E3}">COMM_Outputs_384138BD</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x0317601f</PTCID>
+					<Name>FB_Status</Name>
+					<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176027</PTCID>
+					<Name>FB_Inputs32</Name>
+					<Type GUID="{6560E7E7-BB67-A6FE-1D01-9174E05C797C}">FB_Inputs_CB76017D</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176028</PTCID>
+					<Name>FB_InputsCompressed32</Name>
+					<Type GUID="{5744CF58-6925-D557-3350-073F54FF0659}">FB_Inputs_E412091A</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176034</PTCID>
+					<Name>FB_Inputs64</Name>
+					<Type GUID="{BAFDAD22-6C43-A06B-CAC6-09E039DA3230}">FB_Inputs_CAADDD92</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176035</PTCID>
+					<Name>FB_InputsCompressed64</Name>
+					<Type GUID="{0823150E-9FF8-4FC1-B1C1-A524DC03F376}">FB_Inputs_5C44BF56</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176040</PTCID>
+					<Name>EtherCatState</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176036</PTCID>
+					<Name>DcOutputShift</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000009}">DINT</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+				<DataPointer>
+					<PTCID>#x03176037</PTCID>
+					<Name>DcInputShift</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000009}">DINT</Type>
+					<ContextId>1</ContextId>
+				</DataPointer>
+			</DataPointers>
+			<EventClasses>
+				<EventClass>
+					<Type GUID="{E165FF93-CB57-49AA-B30B-28E416F7DE2A}" Namespace="TcIoXPlanar">XPlanarEvents</Type>
+				</EventClass>
+			</EventClasses>
+			<Properties>
+				<Property>
+					<Name>Category</Name>
+					<Value>Part</Value>
+				</Property>
+				<Property>
+					<Name>ChildCategory</Name>
+					<Value>APS42xx_1xxx_0xxx</Value>
+				</Property>
+			</Properties>
+			<ParentOTCID>#x01010020</ParentOTCID>
+			<ParameterValues>
+				<Value>
+					<Name>BTN</Name>
+					<String></String>
+				</Value>
+				<Value>
+					<Name>TilePositionOnPart.x</Name>
+					<Value>320</Value>
+				</Value>
+				<Value>
+					<Name>TilePositionOnPart.y</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>TaskOID</Name>
+					<Value>33620016</Value>
+				</Value>
+			</ParameterValues>
+		</TmcDesc>
+		<Module File="APS4222_1000_9000.xti"/>
+		<Module File="Object1 (APS4222_1000_9000).xti"/>
+		<Module File="Object2 (APS4222_1000_9000).xti"/>
+	</Module>
+</TcSmItem>

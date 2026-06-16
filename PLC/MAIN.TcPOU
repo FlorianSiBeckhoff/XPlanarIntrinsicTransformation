@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{b7245483-ef8d-4e76-8595-41d40a3d05d2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+   MoverToWorldTransform : MoverToWorldTransform;
+   XPlanarTable : FB_Component_XPlanar;
+   Mover : FB_XPlanarMover;
+   seq : E_Steps;
+   subSeq : UDINT;
+   
+   Position : MoverVector;
+   Velocity : MoverVector;
+   Acceleration : MoverVector;
+   
+   CAxisPower : MC_Power;
+   CAxis : AXIS_REF;
+   a,b : LREAL;
+   Exception : __SYSTEM.ExceptionCode;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE seq OF
+    E_Steps.init:
+        ip.Movers[1] := Mover;
+        subSeq := 0;
+        // wait for manual command to enable
+        
+    E_Steps.enable:
+        IF XplanarTable.EnableMovers().Done THEN
+            seq:= E_Steps.enabled;
+        END_IF
+  
+        IF Mover.Error THEN
+            seq:= E_Steps.error;
+        END_IF
+        
+   E_Steps.enabled:  
+        // wait for manual command to move to center
+   E_Steps.moveCenter:
+        CASE subSeq OF
+            0:
+                IF ip.Movers[1].MoveCommand.SquareUp().Done THEN
+                     subSeq := 10;
+                END_IF
+            
+            10:
+                IF ip.Movers[1].MoveCommand.FreeMove(320, 320, 0).Done THEN
+					subSeq := 20;
+				END_IF
+                
+            20:
+                IF ip.Movers[1].MoveCommand.VerticalMove(2).Done THEN
+					subSeq := 30;
+				END_IF
+              
+            30:   
+                IF ip.Movers[1].MoveCommand.TiltA(15).Done THEN
+					seq:= E_Steps.idle;
+                    subSeq := 0;
+				END_IF
+        END_CASE
+        
+        IF Mover.Error THEN
+            seq:= E_Steps.error;
+        END_IF
+        
+    E_Steps.idle:
+        // wait for manual command to start ext. setpoint gen.
+        // Tilt mover in desired direction via motion UI first.
+    
+    E_Steps.enableExtSp:
+        MoverToWorldTransform.MoverX := Mover.ActualPosition.x;
+        MoverToWorldTransform.MoverY := Mover.ActualPosition.y;
+        MoverToWorldTransform.MoverZ := Mover.ActualPosition.z;
+        MoverToWorldTransform.MoverRx := Mover.ActualPosition.a;
+        MoverToWorldTransform.MoverRy := Mover.ActualPosition.b;
+        MoverToWorldTransform.MoverRz := Mover.ActualPosition.c;
+        seq := E_Steps.runExtSp;
+    
+    E_Steps.runExtSp:
+        MoverToWorldTransform.ToolOffsetRz := CAxis.NcToPlc.ActPos;    
+        __TRY
+            MoverToWorldTransform();
+        __CATCH(Exception) 
+            ; 
+        __ENDTRY
+    
+        Position.x := MoverToWorldTransform.WorldX;
+        Position.y := MoverToWorldTransform.WorldY;
+        Position.z := MoverToWorldTransform.WorldZ;
+        Position.a := MoverToWorldTransform.WorldRx;
+        Position.b := -MoverToWorldTransform.WorldRy; // find root cause of this inversion to planar tile
+        Position.c := MoverToWorldTransform.WorldRz;
+        
+        Velocity.x := 0;
+        Velocity.y := 0;
+        Velocity.z := 0;
+        Velocity.a := CAxis.NcToPlc.ActVelo; // Needs to be adjusted - calculate velocity in real applications
+        Velocity.b := CAxis.NcToPlc.ActVelo; // Needs to be adjusted - calculate velocity in real applications
+        Velocity.c := CAxis.NcToPlc.ActVelo;
+        
+        Acceleration.x := 0;
+        Acceleration.y := 0;
+        Acceleration.z := 0;
+        Acceleration.a := CAxis.NcToPlc.ActAcc;
+        Acceleration.b := CAxis.NcToPlc.ActAcc;
+        Acceleration.c := CAxis.NcToPlc.ActAcc;
+        
+        ip.Movers[1].MoveCommand.RunExternalSpAbsoluteMode(Position,Velocity,Acceleration);
+END_CASE    
+
+
+   
+CAxisPower(
+	Axis:= CAxis, 
+	Enable:= TRUE, 
+	Enable_Positive:= TRUE, 
+	Enable_Negative:= TRUE, 
+	Override:= 100.0 );
+XplanarTable.CyclicLogic();
+
+a := ATAN2(0,1);
+b := ATAN2(1,0);
+ ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
