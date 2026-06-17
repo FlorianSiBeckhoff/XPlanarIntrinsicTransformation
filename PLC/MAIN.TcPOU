@@ -74,7 +74,7 @@ END_VAR
         MoverToWorldTransform.MoverY := Mover.ActualPosition.y;
         MoverToWorldTransform.MoverZ := Mover.ActualPosition.z;
         MoverToWorldTransform.MoverRx := Mover.ActualPosition.a;
-        MoverToWorldTransform.MoverRy := -Mover.ActualPosition.b; // invert input of matrix 
+        MoverToWorldTransform.MoverRy := Mover.ActualPosition.b; // invert input of matrix 
         MoverToWorldTransform.MoverRz := Mover.ActualPosition.c;
         seq := E_Steps.runExtSp;
     
@@ -90,7 +90,7 @@ END_VAR
         Position.y := MoverToWorldTransform.WorldY;
         Position.z := MoverToWorldTransform.WorldZ;
         Position.a := MoverToWorldTransform.WorldRx;
-        Position.b := -MoverToWorldTransform.WorldRy; // find root cause of this inversion to planar tile
+        Position.b := -MoverToWorldTransform.WorldRy;
         Position.c := MoverToWorldTransform.WorldRz;
         
         Velocity.x := 0;
