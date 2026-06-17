@@ -11,6 +11,14 @@ TwinCAT 3 sample that couples a Beckhoff XPlanar mover to an NC rotary (C) axis.
 
 Libraries referenced: `Tc2_MC2`, `Tc2_Standard`, `Tc2_System`, `Tc3_Module`, and Beckhoff's `XPlanarApplication`.
 
+## Rotation convention
+
+Rotations follow the **right-hand rule** about each axis (intrinsic XYZ Tait-Bryan, `R = Rz·Ry·Rx`). A positive angle is a counter-clockwise rotation when looking from the positive end of the axis back toward the origin.
+
+| Positive rotation about X | Positive rotation about Y |
+|---------------------------|---------------------------|
+| ![Positive rotation about X](positive_x_rotation.svg) | ![Positive rotation about Y](positive_y_rotation.svg) |
+
 ## Operating the state machine
 
 `MAIN` is driven by setting `seq` (type `E_Steps`) at runtime, e.g. from the TwinCAT online watch. Force `seq` to the next state when you want to advance — most states do not auto-transition.
