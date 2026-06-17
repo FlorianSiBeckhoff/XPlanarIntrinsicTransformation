@@ -74,7 +74,7 @@ END_VAR
         MoverToWorldTransform.MoverY := Mover.ActualPosition.y;
         MoverToWorldTransform.MoverZ := Mover.ActualPosition.z;
         MoverToWorldTransform.MoverRx := Mover.ActualPosition.a;
-        MoverToWorldTransform.MoverRy := Mover.ActualPosition.b;
+        MoverToWorldTransform.MoverRy := -Mover.ActualPosition.b; // invert input of matrix 
         MoverToWorldTransform.MoverRz := Mover.ActualPosition.c;
         seq := E_Steps.runExtSp;
     

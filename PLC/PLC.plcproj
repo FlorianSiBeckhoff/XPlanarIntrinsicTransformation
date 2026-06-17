@@ -19,9 +19,6 @@
     <LibraryReferences>{d163791e-7672-4582-a3bd-8898149c58b7}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ATAN2.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="E_Steps.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -29,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transformation\ATAN2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Transformation\MoverToWorldTransform.TcPOU">
